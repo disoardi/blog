@@ -1,0 +1,48 @@
+site_name: Isoardi's blog
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.top
+    - toc.integrate
+  custom_dir: 'customizations/'   
+
+markdown_extensions:
+  - tables
+  - attr_list
+  - abbr
+  - pymdownx.snippets
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.critic:
+      mode: view
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+      - class: mermaid
+        format: !!python/name:pymdownx.superfences.fence_code_format ''
+        name: mermaid
+
+plugins:
+  - search
+  - table-reader
+  - enumerate-headings:
+      exclude:
+      - index.md
+      include:
+      - '*'
+      strict: true
+      toc_depth: 6
+  - glightbox:
+      caption_position: bottom
+      draggable: true
+      height: auto
+      width: 100%
+      zoomable: true
+  - blog:
+      blog_dir: . 
+
