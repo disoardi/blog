@@ -6,7 +6,9 @@ Blog personale costruito con [Hugo](https://gohugo.io/) e il tema [PaperMod](htt
 
 Questo è il repository del mio blog tecnologico dove esploro innovazione, open source, big data e riflessioni sulla tecnologia.
 
-**Live site**: [isoardi.info](https://isoardi.info)
+**Live site**: [disoardi.github.io/blog](https://disoardi.github.io/blog/)
+
+> 🚧 Dominio personalizzato `isoardi.info` sarà configurato successivamente.
 
 ## 📦 Stack Tecnologico
 
@@ -246,7 +248,7 @@ Codice del sito: MIT (vedi tema PaperMod per dettagli)
 
 ## 🔗 Links
 
-- **Blog**: [isoardi.info](https://isoardi.info)
+- **Blog**: [disoardi.github.io/blog](https://disoardi.github.io/blog/)
 - **GitHub**: [@disoardi](https://github.com/disoardi)
 - **Hugo Docs**: [gohugo.io](https://gohugo.io/)
 - **PaperMod Docs**: [adityatelange.github.io/hugo-PaperMod](https://adityatelange.github.io/hugo-PaperMod/)
