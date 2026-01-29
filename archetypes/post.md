@@ -6,7 +6,7 @@ categories: []
 tags: []
 description: ""
 cover:
-  image: /img/{{ dateFormat "20060102" .Date }}_{{ .File.ContentBaseName }}_header.jpg
+  image: img/{{ dateFormat "20060102" .Date }}_{{ .File.ContentBaseName }}_header.jpg
   alt: ""
   relative: false
 draft: true

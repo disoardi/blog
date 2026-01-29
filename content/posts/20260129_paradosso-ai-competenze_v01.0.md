@@ -6,7 +6,7 @@ categories: [AI, Tecnologia, Riflessioni]
 tags: [intelligenza-artificiale, AI-generativa, competenze, sviluppo-software, sysadmin, open-source]
 description: "Riflessioni di un sistemista senior sull'uso quotidiano dell'AI: tra produttività estrema e il rischio concreto di perdere le competenze fondamentali che ci permettono di guidare la tecnologia."
 cover:
-  image: /img/20260129_ai-paradosso-competenze_header.jpg
+  image: img/20260129_ai-paradosso-competenze_header.jpg
   alt: "AI e il Paradosso delle Competenze"
   relative: false
 draft: false
