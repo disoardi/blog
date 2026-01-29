@@ -1,0 +1,204 @@
+/*
+ * Star Trek LCARS-inspired theme customizations
+ * Subtle touches inspired by the USS Enterprise computer interface
+ */
+
+:root {
+    /* LCARS color palette */
+    --lcars-orange: #FF9966;
+    --lcars-blue: #9999FF;
+    --lcars-pink: #CC99CC;
+    --lcars-peach: #FFCC99;
+    --lcars-red: #CC6666;
+    --trek-accent: var(--lcars-orange);
+}
+
+/* Subtle LCARS-inspired header styling */
+.main .post-title {
+    border-left: 4px solid var(--trek-accent);
+    padding-left: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.main .post-title:hover {
+    border-color: var(--lcars-blue);
+}
+
+/* LCARS-style buttons and links */
+a:hover {
+    color: var(--trek-accent);
+    transition: color 0.2s ease;
+}
+
+/* Header links with LCARS style */
+.top-link {
+    background: var(--trek-accent) !important;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.top-link:hover {
+    background: var(--lcars-blue) !important;
+    transform: scale(1.1);
+}
+
+/* Post meta with Trek accent */
+.post-meta {
+    color: var(--secondary);
+    border-left: 2px solid var(--lcars-pink);
+    padding-left: 0.75rem;
+    margin-left: 0;
+}
+
+/* Code blocks with LCARS touch */
+.highlight,
+pre {
+    border-left: 3px solid var(--trek-accent);
+    border-radius: 8px;
+}
+
+/* Tags with LCARS styling */
+.post-tags .tags a {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 4px 12px;
+    transition: all 0.2s ease;
+}
+
+.post-tags .tags a:hover {
+    background: var(--trek-accent);
+    color: var(--theme);
+    border-color: var(--trek-accent);
+}
+
+/* Profile card LCARS accent */
+.first-entry {
+    border-top: 3px solid var(--trek-accent);
+    border-radius: 12px;
+    transition: border-color 0.3s ease;
+}
+
+.first-entry:hover {
+    border-top-color: var(--lcars-blue);
+}
+
+/* Navigation menu LCARS style */
+.nav a {
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--trek-accent);
+    transition: width 0.3s ease;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+/* ReadingTime and word count with Trek accent */
+.post-meta .reading-time::before {
+    content: '🖖 ';
+}
+
+/* Blockquotes with LCARS styling */
+blockquote {
+    border-left: 4px solid var(--trek-accent);
+    border-radius: 0 8px 8px 0;
+    padding-left: 1.25rem;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* Table of Contents LCARS style */
+.toc {
+    border: 2px solid var(--border);
+    border-left: 4px solid var(--lcars-blue);
+    border-radius: 8px;
+}
+
+.toc summary {
+    font-weight: 600;
+    color: var(--trek-accent);
+}
+
+/* Post navigation with LCARS accents */
+.paginav {
+    border-radius: 12px;
+}
+
+.paginav a {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.paginav a:hover {
+    border-color: var(--trek-accent);
+    background: var(--code-bg);
+}
+
+/* Social icons Trek style */
+.social-icons a {
+    transition: all 0.2s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-2px);
+    color: var(--trek-accent);
+}
+
+/* Footer with subtle LCARS touch */
+footer {
+    border-top: 2px solid var(--border);
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 2px;
+    background: var(--trek-accent);
+}
+
+/* Responsive: disable some effects on mobile */
+@media screen and (max-width: 768px) {
+    .nav a::after {
+        display: none;
+    }
+}
+
+/* Dark mode adjustments */
+.dark {
+    --trek-accent: var(--lcars-peach);
+}
+
+/* Easter egg: Konami code ready ;) */
+body.engage-warp {
+    animation: warp-speed 0.5s ease-out;
+}
+
+@keyframes warp-speed {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.02);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

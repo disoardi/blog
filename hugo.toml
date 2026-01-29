@@ -1,0 +1,102 @@
+baseURL = 'https://isoardi.info/'
+languageCode = 'it'
+title = 'Davide Isoardi - Tech Blog'
+theme = 'PaperMod'
+copyright = "© 2026 Davide Isoardi"
+
+# Enable emoji support
+enableEmoji = true
+
+# Pagination
+[pagination]
+  pagerSize = 10
+
+[params]
+  author = "Davide Isoardi"
+  description = "Blog di un nerd appassionato di innovazione, open source, big data e tecnologie Hadoop. Con un tocco di Star Trek."
+
+  # Theme mode
+  defaultTheme = "auto" # auto, light, dark
+
+  # Show reading time
+  ShowReadingTime = true
+
+  # Show post meta (date, reading time, etc)
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowRssButtonInSectionTermList = true
+  ShowToc = true
+  TocOpen = true
+
+  # Comments disabled for now
+  comments = false
+
+  # Home page settings
+  [params.homeInfoParams]
+    Title = "Benvenuto a bordo della USS Isoardi"
+    Content = """
+Sono Davide, sistemista senior e leader del centro di eccellenza Hadoop.
+Questo è il mio log di bordo personale dove esploro innovazione, open source, big data e riflessioni tech.
+Membro dell'Italian Linux Society e partecipante attivo al Linux Day di Torino dal 2012.
+
+*"Resistance is futile... but learning is essential."*
+"""
+
+  # Social links
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/disoardi"
+
+  [[params.socialIcons]]
+    name = "rss"
+    url = "/index.xml"
+
+# Main menu
+[[menu.main]]
+  identifier = "posts"
+  name = "Articoli"
+  url = "/posts/"
+  weight = 10
+
+[[menu.main]]
+  identifier = "categories"
+  name = "Categorie"
+  url = "/categories/"
+  weight = 20
+
+[[menu.main]]
+  identifier = "tags"
+  name = "Tags"
+  url = "/tags/"
+  weight = 30
+
+[[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 40
+
+# Taxonomies
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+# Markup settings
+[markup]
+  [markup.highlight]
+    style = "monokai"
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
+
+# Output formats
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# Privacy settings (no analytics for now)
+[privacy]
+  [privacy.x]
+    enableDNT = true
+  [privacy.youtube]
+    privacyEnhanced = true
