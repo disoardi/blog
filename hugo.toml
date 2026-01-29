@@ -1,4 +1,4 @@
-baseURL = 'https://isoardi.info/'
+baseURL = 'https://disoardi.github.io/blog/'
 languageCode = 'it'
 title = 'Davide Isoardi - Tech Blog'
 theme = 'PaperMod'
