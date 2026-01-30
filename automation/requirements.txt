@@ -1,0 +1,10 @@
+# Python dependencies for Home Assistant Release Monitor
+
+# Core dependencies
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+PyYAML>=6.0.1
+lxml>=5.0.0  # Better HTML parsing performance
+
+# Note: Claude Code CLI is required but doesn't need to be installed via pip
+# Install it from: https://docs.anthropic.com/claude/docs/claude-code
