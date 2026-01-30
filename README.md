@@ -241,6 +241,17 @@ git submodule update --remote --merge
 
 Questo è un blog personale, ma se trovi typo o errori, sentiti libero di aprire una issue o PR!
 
+## 🔒 Sicurezza e Privacy
+
+Questo repository è **pubblico** ma configurato in modo sicuro:
+
+- ✅ Nessun dato sensibile committato (password, API keys, percorsi locali)
+- ✅ File di configurazione locale (`automation/config.yaml`) protetti via `.gitignore`
+- ✅ File `.env` e log esclusi dal versioning
+- ✅ Template di configurazione pubblici (`*.example`) per la condivisione
+
+**Setup Automation**: Se vuoi usare il sistema di automation degli articoli, consulta `automation/README.md` e usa `config.yaml.example` come template per la tua configurazione locale.
+
 ## 📄 Licenza
 
 Contenuto: © 2026 Davide Isoardi

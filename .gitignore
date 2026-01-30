@@ -17,3 +17,11 @@ Thumbs.db
 *.swp
 *.swo
 *~
+
+# Automation - Local configuration and sensitive files
+automation/config.yaml
+automation/.env
+automation/temp/*
+!automation/temp/.gitkeep
+automation/logs/*.log
+automation/__pycache__/

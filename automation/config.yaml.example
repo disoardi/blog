@@ -1,0 +1,22 @@
+# Blog Configuration Example
+# Copy this file to config.yaml and customize with your settings
+
+blog:
+  root_path: /path/to/your/blog  # Change to your blog root directory
+  post_dir: Post                  # Directory for markdown posts
+  img_dir: img                    # Directory for post images
+
+monitoring:
+  target_version: '2026.2'        # Home Assistant version to monitor
+  ha_blog_url: https://www.home-assistant.io/blog/categories/core/
+  check_interval_hours: 6         # How often to check for new releases
+  state_file: automation/temp/monitor_state.json
+
+claude:
+  model: claude-sonnet-4-5-20250929  # Claude model to use
+  max_tokens: 8000                    # Max tokens per API call
+  temperature: 0.7                    # Creativity level (0.0-1.0)
+
+logging:
+  level: INFO                     # Logging level: DEBUG, INFO, WARNING, ERROR
+  log_dir: automation/logs        # Directory for log files

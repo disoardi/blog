@@ -1,0 +1,40 @@
+# Environment variables
+.env
+
+# Local configuration
+config.yaml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Poetry
+poetry.lock
+
+# Logs
+logs/*.log
+*.log
+
+# Temporary files
+temp/*
+!temp/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
