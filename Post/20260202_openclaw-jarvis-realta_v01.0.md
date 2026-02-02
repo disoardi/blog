@@ -5,6 +5,10 @@ author: Davide Isoardi
 categories: [AI, Self-Hosting, Security]
 tags: [openclaw, ai-agent, llm, homelab, security, telegram, jarvis, self-hosting, privacy]
 description: "Analisi approfondita di OpenClaw, l'AI assistant self-hosted con 147k stelle GitHub che promette di essere il tuo Jarvis personale. Ma tra prompt injection, container root e autonomous execution, è davvero sicuro fidarsi?"
+cover:
+  image: img/20260202_openclaw-jarvis-realta_header.jpg
+  alt: "AI Robot Assistant - OpenClaw Jarvis Reality"
+  relative: false
 ---
 
 **Riassunto**: OpenClaw è un AI assistant self-hosted che connette Telegram, WhatsApp, Discord e altri messenger a modelli LLM locali o cloud. Con 147k stelle GitHub sembra il progetto definitivo per avere il proprio Jarvis, ma nasconde criticità di sicurezza non banali che vanno capite prima di dargli le chiavi del proprio homelab.
