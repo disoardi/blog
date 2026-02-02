@@ -1,6 +1,6 @@
 ---
 title: "OpenClaw: Quando Jarvis Diventa Realtà (e Perché Dovresti Essere Titubante)"
-date: 2026-02-03
+date: 2026-02-02
 author: Davide Isoardi
 categories: [AI, Self-Hosting, Security]
 tags: [openclaw, ai-agent, llm, homelab, security, telegram, jarvis, self-hosting, privacy]
