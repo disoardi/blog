@@ -1,14 +1,10 @@
 ---
 title: "Self-Host Weekly #155: Le Novità che Contano per Chi si Auto-Ospita"
-date: 2026-01-30
+date: 2026-02-02
 author: Davide Isoardi
 categories: [Self-Hosting, Open Source]
 tags: [self-hosting, homelab, backup, calibre, rackula, repoflow, zerobyte, openclaw, fosdem]
 description: "Analisi delle novità più interessanti dalla Self-Host Weekly #155: da OpenClaw che rivoluziona l'AI self-hosted, a Calibre-Web Automated 4.0 con le Magic Shelves, fino a Zerobyte per backup intelligenti"
-cover:
-  image: img/20260130_selfhst-weekly-155_header.jpg
-  alt: "Self-Hosting e Homelab"
-  relative: false
 ---
 
 **Riassunto**: Questa settimana nel mondo self-hosting troviamo OpenClaw che porta l'AI a casa nostra con oltre 100k stelle su GitHub, Calibre-Web Automated 4.0 con funzionalità quasi magiche per gestire gli ebook, e una serie di tool che semplificano la vita a noi homelabber.
