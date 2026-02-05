@@ -1,6 +1,7 @@
 ---
 title: "OpenSearch vs Splunk vs Elasticsearch vs Solr: Quale Scegliere per il Tuo Stack?"
 date: 2026-02-05
+lastmod: 2026-02-05
 author: Davide Isoardi
 categories: [Architecture, Search, Analytics]
 tags: [opensearch, splunk, elasticsearch, solr, search-engine, log-analytics, architecture, distributed-systems]
@@ -38,7 +39,7 @@ Tutti e quattro i tool usano inverted index per full-text search, ma con ottimiz
 **Inverted Index classico** (come usato da tutti):
 Mappa termini → documento IDs. Ottimo per keyword search ("trova documenti che contengono 'error' AND 'database'"), ma costoso per aggregazioni su campi strutturati.
 
-Il trade-off: quando fai query tipo "conta quanti errori per servizio negli ultimi 7 giorni", l'inverted index deve scannare molti documenti. Elasticsearch e OpenSearch introducono doc_values (columnar storage affiancato) per velocizzare aggregazioni. Splunk ottimizza diversamente con bloom filters e TSIDX files.
+Il trade-off: quando fai query tipo "conta quanti errori per servizio negli ultimi 7 giorni", l'inverted index deve scannare molti documenti. Elasticsearch e OpenSearch introducono doc_values (columnar storage affiancato) per velocizzare aggregazioni. Splunk ottimizza diversamente con bloom filters e [TSIDX files](/blog/deep-dive/20260205_tsidx-format_v01.0/) (formato proprietario ottimizzato per time-series).
 
 **Perché importa:** Se il tuo use case è heavy on aggregations (dashboards con grafici time-series), l'architettura columnar fa differenza su performance e costi.
 
@@ -185,7 +186,7 @@ Splunk ha un'architettura distintiva rispetto a Elastic-family:
 
 2. **Indexers:**
    - Ingestiscono dati da forwarders
-   - Creano TSIDX files (time-series index ottimizzato)
+   - Creano [TSIDX files](/blog/deep-dive/20260205_tsidx-format_v01.0/) (time-series index ottimizzato con lexicon, posting lists e bloom filters)
    - Replication tra indexers per HA
 
 3. **Search Heads:**
