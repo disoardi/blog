@@ -25,3 +25,4 @@ automation/temp/*
 !automation/temp/.gitkeep
 automation/logs/*.log
 automation/__pycache__/
+transcript.txt

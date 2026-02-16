@@ -20,6 +20,29 @@ Inoltre sono un hobbista del self-hosting quindi cerco sempre soluzioni che poss
 - Segnala, quando ritieni utile, la necessità di consultare documenti referenziati ma non direttamente disponibili
 - se lo ritieni opportuno accedi al web per recircare e documentare fonti o arricchire il contenuto dell'articolo
 - Qualora fosse utile, è possibile fare riferimento ad altri articoli del blog per completezza e coerenza.
+
+### Cross-linking e Aggiornamento Articoli
+- **Prima di scrivere un nuovo articolo**, ricerca tra gli articoli esistenti in `./Post` e `./content/deep-dive/` (se presente) per identificare contenuti correlati
+- **Durante la scrittura**, inserisci link incrociati verso:
+  - Articoli precedenti che trattano argomenti correlati
+  - Deep-dive tecnici che approfondiscono concetti menzionati
+  - Altri articoli del blog che forniscono contesto aggiuntivo
+- **Dopo la pubblicazione di un nuovo articolo**, aggiorna ricorsivamente gli articoli esistenti per creare link bidirezionali:
+  - Aggiungi riferimenti al nuovo contenuto in articoli vecchi quando rilevante
+  - Crea una rete di conoscenza interconnessa tra gli articoli
+- **Gestione date negli aggiornamenti**:
+  - `date`: data di creazione originale - **IMMUTABILE**, non modificare mai
+  - `lastmod`: data ultima modifica - aggiungila o aggiornala quando modifichi un articolo esistente
+  - Esempio front matter per articolo aggiornato:
+    ```yaml
+    ---
+    title: "Titolo Articolo"
+    date: 2026-02-01
+    lastmod: 2026-02-05
+    author: Davide Isoardi
+    ---
+    ```
+
 - Non inserire mai dati falsi nel contenuto né inventare numeri/metriche plausibili per soddisfare i requisiti. È disonesto e
   potenzialmente pericoloso per la nostra credibilità
 - Preferisci sempre argomentazioni basate su software open source quando possibile e inserisci link ad eventuali repo git pubblici di elementi citati
@@ -28,6 +51,69 @@ Inoltre sono un hobbista del self-hosting quindi cerco sempre soluzioni che poss
 - Gli articoli vanno posizionati nel path ./Post
 - eventuali immagini generate o scaricate vanno messe nella cartella ./img
 - in testa ad ogni articolo metti un riassunto breve e utilizza TL;DR per la parte estesa
+
+## Deep-Dive: Articoli Tecnici Approfonditi
+
+Gli articoli deep-dive sono contenuti atemporali che approfondiscono concetti tecnici specifici. Si distinguono dagli articoli temporali del blog per natura e struttura.
+
+### Organizzazione
+- **Directory**: `./content/deep-dive/` (Hugo) e copia anche in `./Post/` per backup
+- **Naming convention**: `yyyyMMdd_topic-keyword_vXX.Y.md` (stessa degli articoli normali)
+- **URL finale**: `/blog/deep-dive/topic-keyword/`
+
+### Struttura Obbligatoria del Preambolo
+
+Ogni deep-dive deve iniziare con un preambolo che include:
+
+```markdown
+---
+title: "Titolo Descrittivo del Concetto"
+date: 2026-02-XX
+author: Davide Isoardi
+categories: [Deep Dive, Category]
+tags: [tag1, tag2, tag3]
+description: "Descrizione SEO-friendly"
+complexity: advanced  # basic | intermediate | advanced | expert
+prerequisites:
+  - title: "Prerequisito Obbligatorio"
+    url: "/blog/deep-dive/prerequisito/"
+    required: true
+  - title: "Prerequisito Consigliato"
+    url: "/blog/posts/articolo-correlato/"
+    required: false
+reading_time: "15-20 min"
+---
+
+## 📋 Requisiti
+
+**Livello**: Advanced
+**Tempo lettura stimato**: 15-20 minuti
+**Prerequisiti obbligatori**:
+- Descrizione prerequisito 1
+- Descrizione prerequisito 2
+
+**Prerequisiti consigliati**:
+- Descrizione prerequisito opzionale
+
+---
+
+[Contenuto articolo...]
+```
+
+### Livelli di Complessità
+
+- **basic**: concetti fondamentali, accessibili a chi ha conoscenze informatiche generali
+- **intermediate**: richiede familiarità con architetture distribuite e sistemi complessi
+- **advanced**: per engineer con esperienza pratica in produzione
+- **expert**: per architect e specialist del dominio specifico
+
+### Caratteristiche dei Deep-Dive
+
+- **Focus**: un singolo concetto tecnico approfondito (es. "Inverted Index", "TSIDX Format", "Sharding Models")
+- **Tono**: tecnico ma accessibile, mantieni comunque lo stile colloquiale
+- **Esempi**: concreti e verificabili, con codice/configurazioni reali dove applicabile
+- **Diagrammi**: descrivi chiaramente cosa dovrebbe essere visualizzato
+- **Fonti**: cita sempre documentazione ufficiale e risorse verificabili
 
 ## Accorgimenti per rendere il testo più plausibilmente scritto da un umano **IMPORTANTE**
 

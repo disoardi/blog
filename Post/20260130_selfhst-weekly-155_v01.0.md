@@ -1,6 +1,7 @@
 ---
 title: "Self-Host Weekly #155: Le Novità che Contano per Chi si Auto-Ospita"
 date: 2026-02-02
+lastmod: 2026-02-14
 author: Davide Isoardi
 categories: [Self-Hosting, Open Source]
 tags: [self-hosting, homelab, backup, calibre, rackula, repoflow, zerobyte, openclaw, fosdem]
@@ -77,7 +78,7 @@ Costa $79/mese per la versione cloud, ma c'è un tier gratuito con 10GB storage,
 
 Restic è fantastico per i backup, ma ammettiamolo: gestire tutto da linea di comando può diventare tedioso. [Zerobyte](https://github.com/nicotsx/zerobyte) è un wrapper con interfaccia web che rende tutto più semplice.
 
-Crei repository, scheduli job, monitori snapshot tutto da browser invece di scrivere script bash e cronjob a mano. Supporta storage locale, S3-compatible, Google Cloud Storage, Azure Blob, e tramite rclone puoi backuppare su praticamente qualsiasi cloud: Google Drive, Dropbox, OneDrive, Backblaze B2, Wasabi...
+Crei repository, scheduli job, monitori snapshot tutto da browser invece di scrivere script bash e cronjob a mano. Supporta storage locale, **S3-compatible** (⚠️ se usi MinIO, vedi [questo articolo su alternative post-maintenance mode](/blog/posts/20260214_minio-maintenance-mode_v01.0/)), Google Cloud Storage, Azure Blob, e tramite rclone puoi backuppare su praticamente qualsiasi cloud: Google Drive, Dropbox, OneDrive, Backblaze B2, Wasabi...
 
 Ma la parte che mi piace di più è il supporto per share di rete: NFS, SMB, WebDAV out of the box. Perfetto per chi ha un NAS e vuole backuppare altri server della rete senza dover montare manualmente le share su ogni macchina.
 
